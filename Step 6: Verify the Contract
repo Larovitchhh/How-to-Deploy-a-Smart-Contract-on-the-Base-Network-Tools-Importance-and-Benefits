@@ -1,0 +1,5 @@
+Use a block explorer like BaseScan to verify your contract’s source code for transparency.
+With Hardhat, you can verify using:bash
+
+npx hardhat verify --network baseSepolia <contract-address>
+
