@@ -1,0 +1,14 @@
+Install Node.js and npm: Ensure Node.js (v16 or higher) and npm are installed on your system.
+Install Hardhat:bash
+
+npm install --save-dev hardhat
+
+Create a Hardhat Project:bash
+
+npx hardhat init
+
+Follow the prompts to set up a basic project structure.
+Install Dependencies:bash
+
+npm install @openzeppelin/contracts dotenv
+
