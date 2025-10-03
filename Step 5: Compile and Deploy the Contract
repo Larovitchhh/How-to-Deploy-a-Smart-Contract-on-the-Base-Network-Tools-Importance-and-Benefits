@@ -1,0 +1,31 @@
+Compile the Contract:bash
+
+npx hardhat compile
+
+Create a Deployment Script:
+In the scripts/ directory, create deploy.js:javascript
+
+const hre = require("hardhat");
+
+async function main() {
+  const SimpleStorage = await hre.ethers.getContractFactory("SimpleStorage");
+  const simpleStorage = await SimpleStorage.deploy();
+
+  await simpleStorage.deployed();
+  console.log("SimpleStorage deployed to:", simpleStorage.address);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+
+Deploy to Base:
+For the testnet:bash
+
+npx hardhat run scripts/deploy.js --network baseSepolia
+
+For the mainnet:bash
+
+npx hardhat run scripts/deploy.js --network base
+
